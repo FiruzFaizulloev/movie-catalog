@@ -1,0 +1,60 @@
+@import "../../styles/variables";
+
+.movies {
+  display: flex;
+  margin-top: 20px;
+
+  &-genre {
+    flex: 1;
+  }
+
+  &-container {
+    flex: 4;
+  }
+
+  &-content {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+
+  .movie {
+    width: 25%;
+    padding: 0 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+
+    &-img {
+      max-width: 100%;
+      border: 1px solid #777;
+      padding: 4px;
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+      border-radius: 6px;
+    }
+
+    &-name {
+      margin: 4px 0 0;
+    }
+  }
+}
+
+
+@media screen and (max-width: $medium) {
+  .movies {
+    .movie {
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (max-width: $small) {
+  .movies {
+    .movie {
+      width: 100%;
+    }
+  }
+}

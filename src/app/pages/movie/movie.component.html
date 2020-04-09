@@ -1,0 +1,16 @@
+<div class="movies">
+  <div class="movies-genre">
+    <p class="title">Filter by Genre</p>
+  </div>
+  <div class="movies-container">
+    <input type="text" placeholder="Search..." (keyup)="onSearch($event.target.value)">
+    <div class="movies-content">
+      <div class="movie"
+           *ngFor="let movie of movies$ | async"
+           [routerLink]="[movie.key]">
+        <img class="movie-img" [src]="movie.img | movieImg" [alt]="movie.name">
+        <p class="movie-name">{{movie.name}}</p>
+      </div>
+    </div>
+  </div>
+</div>
